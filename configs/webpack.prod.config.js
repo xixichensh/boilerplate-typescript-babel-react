@@ -13,7 +13,7 @@ module.exports = {
 
     entry: {
         index: ['@babel/polyfill', './src/index.tsx'],
-        vendor: ['jquery', 'md5', 'base64', 'common', 'ttfund', 'react', 'react-dom', 'redux', 'react-redux', 'react-router']
+        vendor: ['jquery', 'md5', 'base64', 'react', 'react-dom', 'redux', 'react-redux', 'react-router']
     },
 
     output: {
@@ -117,12 +117,7 @@ module.exports = {
         alias: {
             'jquery': resolve(srcDir, 'libs/zepto'),
             'md5': resolve(srcDir, 'libs/md5'),
-            'base64': resolve(srcDir, 'libs/base64'),
-
-            'common': resolve(srcDir, 'plugins/common'),
-            'ttfund': resolve(srcDir, 'plugins/ttfund'),
-            'requestmodel': resolve(srcDir, 'plugins/requestmodel'),
-            'nativebridge': resolve(srcDir, 'plugins/nativebridge')
+            'base64': resolve(srcDir, 'libs/base64')
         }
     },
 
