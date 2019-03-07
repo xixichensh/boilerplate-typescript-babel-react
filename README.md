@@ -21,16 +21,16 @@ a boilerplate for Typescript-Babel7-React project
 
 
 ## Usage
-####安装
+#### 安装
 ```
 git clone https://github.com/xixichensh/boilerplate-grunt-webpack-react.git
 npm install
 ```
-####开发
+#### 开发
 ```
 double click index.html start
 ```
-####打包
+#### 打包
 ```
 grunt or double click build.bat
 ```
