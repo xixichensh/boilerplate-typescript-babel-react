@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="format-detection" content="telephone=no">
+    <!--禁用手机号码链接(for iPhone)-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <!--自适应设备宽度-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!--控制全屏时顶部状态栏的外，默认白色-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!--是否允许全屏显，只有在桌面启动时可用-->
+    <title>标题</title>
+
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+        //auto adaptation
+        var calculate_size = function() {
+            // var BASE_FONT_SIZE = 100;
+            var docEl = document.documentElement,
+                clientWidth = document.querySelector("#root").clientWidth;
+            if (!clientWidth) return;
+            docEl.style.fontSize = (clientWidth / 10) + 'px';
+        };
+        // Abort if browser does not support addEventListener
+        if (document.addEventListener) {
+            var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+            window.addEventListener(resizeEvt, calculate_size, false);
+            document.addEventListener('DOMContentLoaded', calculate_size, false);
+            calculate_size();
+        }
+    </script>
+</body>
+</html>
